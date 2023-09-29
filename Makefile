@@ -1,5 +1,5 @@
 
-All: fork-wait open-write-close sighand sigstop-sigcont syscall
+All: fork-wait open-write-close sighand sigstop-sigcont syscall segfault
 
 fork-wait: fork-wait.c
 	gcc fork-wait.c -g -O0 -o fork-wait
@@ -16,5 +16,8 @@ sigstop-sigcont: sigstop-sigcont.c
 syscall: syscall.c
 	gcc syscall.c -g -O0 -o syscall
 
+segfault: segfault.c
+	gcc segfault.c -g -O0 -o segfault
+
 clean:
-	rm fork-wait open-write-close sighand sigstop-sigcont syscall
+	rm -f fork-wait open-write-close sighand sigstop-sigcont syscall segfault file0

@@ -3,3 +3,4 @@ open-write-close
 sighand
 sigstop-sigcont
 syscall
+file0
